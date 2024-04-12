@@ -3,22 +3,22 @@ package main
 import "fmt"
 
 func main() {
-	module := 8 % 2
+	// Defer - execute to end
+	defer fmt.Println("Hola")
+	fmt.Println("Mundo")
 
-	switch module {
-	case 0:
-		fmt.Println("Es par")
-	default:
-		fmt.Println("Es impar")
-	}
+	// Continue and Break
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
 
-	value := 200
-	switch {
-	case value > 100:
-		fmt.Println("Es mayor a 100")
-	case value < 0:
-		fmt.Println("Es menor de 0")
-	default:
-		fmt.Println("No condición")
+		if i == 2 {
+			fmt.Println("Es 2")
+			continue
+		}
+
+		if i == 8 {
+			fmt.Println("Break")
+			break
+		}
 	}
 }
