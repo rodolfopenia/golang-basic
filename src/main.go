@@ -1,23 +1,18 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
+
+type car struct {
+	brand string
+	year  int
+}
 
 func main() {
-	m := make(map[string]int)
+	myCar := car{brand: "Ford", year: 2020}
+	fmt.Println(myCar)
 
-	m["Jose"] = 14
-	m["Pepito"] = 20
-
-	fmt.Println(m)
-
-	// Iterar map
-	for i, v := range m {
-		fmt.Println(i, v)
-	}
-
-	// Found a value in maps
-	value, ok := m["Jose"]
-	fmt.Println(value, ok)
+	// another form
+	var otherCar car
+	otherCar.brand = "Ferrari"
+	fmt.Println(otherCar)
 }
