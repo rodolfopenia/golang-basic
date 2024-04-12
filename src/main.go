@@ -3,29 +3,56 @@ package main
 import "fmt"
 
 func main() {
-	// Declare constants
-	const pi float64 = 3.14
-	const pi2 = 3.1415
-	fmt.Println("pi", pi)
-	fmt.Println("pi2", pi2)
-
-	// Declare int variables
-	base := 12
-	var height int = 14
-	var area int
-	fmt.Println("Base", base)
-	fmt.Println("Altura", height)
-	fmt.Println("Área", area)
-
-	// Zero values
-	var a int     // print 0
-	var b float64 // print 0
-	var c string  // print empty
-	var d bool    // print false
-
-	fmt.Println(a, b, c, d)
 
 	const squareBase = 10
 	squareArea := squareBase * squareBase
 	fmt.Println("Area cuadrado:", squareArea)
+
+	x := 10
+	y := 50
+
+	// Add
+	result := x + y
+	fmt.Println("Suma:", result)
+
+	// Rest
+	result = y - x
+	fmt.Println("Resta:", result)
+
+	// Multiply
+	result = x * y
+	fmt.Println("Multiplicar", result)
+
+	// Split
+	result = y / x
+	fmt.Println("División: ", result)
+
+	// Residue
+	result = y % x
+	fmt.Println("Residuo:", result)
+
+	// Increment
+	x++
+	fmt.Println("Incremental:", x)
+
+	// Decrement
+	x--
+	fmt.Println("Decremental", x)
+
+	// Homework
+	// Find the area of rectangle, trapeze and circle.
+	const base float64 = 10
+	const height float64 = 5
+	const minorBase float64 = 6
+	const majorBase float64 = 8
+	const PI float64 = 3.14
+	const diameter float64 = 6
+
+	rectangleArea := base * height
+	trapezeArea := ((majorBase + minorBase) / 2) * height
+	circleArea := diameter * PI
+
+	fmt.Println("Área del rectángulo:", rectangleArea)
+	fmt.Println("Área del trapecio:", trapezeArea)
+	fmt.Println("Área del círculo:", circleArea)
 }
