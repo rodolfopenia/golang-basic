@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	pk "curso-golang/src/mypackage"
+	"fmt"
+)
 
 type car struct {
 	brand string
@@ -8,11 +11,10 @@ type car struct {
 }
 
 func main() {
-	myCar := car{brand: "Ford", year: 2020}
+	var myCar pk.CarPublic
+	myCar.Brand = "Ferrari"
+	myCar.Year = 2020
 	fmt.Println(myCar)
 
-	// another form
-	var otherCar car
-	otherCar.brand = "Ferrari"
-	fmt.Println(otherCar)
+	pk.PrintMessage("Hola PLatzi")
 }
