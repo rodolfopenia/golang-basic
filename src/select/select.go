@@ -6,7 +6,7 @@ func message(text string, c chan string) {
 	c <- text
 }
 
-func select() {
+func select1() {
 	c := make(chan string, 2)
 	c <- "Mensaje 1"
 	c <- "Mensaje 2"
