@@ -1,4 +1,4 @@
-package main
+package select1
 
 import "fmt"
 
@@ -6,7 +6,7 @@ func message(text string, c chan string) {
 	c <- text
 }
 
-func main() {
+func select() {
 	c := make(chan string, 2)
 	c <- "Mensaje 1"
 	c <- "Mensaje 2"
