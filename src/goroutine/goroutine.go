@@ -1,4 +1,4 @@
-package main
+package goroutine
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ func say(text string, wg *sync.WaitGroup) {
 	fmt.Println(text)
 }
 
-func main() {
+func goroutine() {
 	var wg sync.WaitGroup
 
 	fmt.Println("Hello")
